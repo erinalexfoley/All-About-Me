@@ -18,7 +18,17 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func more(_ sender: Any) {
+        var random = Int.random(in: 0..<9)
+        imageView.image = pics[random]
+    }
+    
+    let pics: [UIImage] = [#imageLiteral(resourceName: "image-3"), #imageLiteral(resourceName: "Image-2"), #imageLiteral(resourceName: "image-6"), #imageLiteral(resourceName: "Image"), #imageLiteral(resourceName: "image-9"), #imageLiteral(resourceName: "image-7"), #imageLiteral(resourceName: "Image-1"), #imageLiteral(resourceName: "image-5"), #imageLiteral(resourceName: "image-8")]
+    
     @IBOutlet weak var fact1: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var fact2: UILabel!
     
